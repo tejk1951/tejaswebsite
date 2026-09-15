@@ -12,7 +12,7 @@ const products = [
 		name: 'Granura Elix',
 		price: '₹30',
 		description: 'Sesame juice sweetened with jaggery and mixed with chia seeds. The best summer drink in the store.',
-		image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBd_WLdtM5M7jLz8SKfeGVBAT8oofmePVMv_Jfzhw16RWZL77VG5LD57lAeWXn6VK79wlANdnLwJdoJXq4pT2ADYqyUJ826siFFvrRkpQz4noJtkF51I90R-GI0exnqCtgFe1G9vYT2EZYj1kvEhrPxQr63YL6RRfCBSGhk4O05gE9QSIJwHl_hVkxSNhKfCDdNwcAAXm-Q1Yg2ejnPDheTGRKc4eSMJWPEOQyytQHNxDABZ8157DWmO_8GtYgXy8YfQDU',
+		image: '',
 	},
 ];
 
@@ -64,7 +64,7 @@ const pillars = [
 				<div class="mx-auto mb-14 max-w-2xl text-center"><p class="caps mb-4 text-xs font-semibold text-[#93470b]">Main menu</p><h2 class="display text-4xl font-medium md:text-5xl">Juice in the store</h2></div>
 				<div class="mx-auto grid max-w-5xl gap-10 md:grid-cols-2">
 					{products.map((product) => <article class="group">
-						<div class="mb-6 aspect-[3/4] overflow-hidden rounded-xl bg-[#f4f3f1]"><img class="h-full w-full object-cover transition duration-700 group-hover:scale-105" src={product.image} alt={product.name} /></div>
+						<div class="mb-6 aspect-[3/4] overflow-hidden rounded-xl bg-[#f4f3f1]">{product.image ? <img class="h-full w-full object-cover transition duration-700 group-hover:scale-105" src={product.image} alt={product.name} /> : <div class="flex h-full flex-col items-center justify-center gap-3 bg-[#e3e2e0] px-8 text-center"><span class="caps text-xs font-semibold text-[#93470b]">Granura Elix</span><span class="display text-2xl text-[#544339]">Image coming soon</span></div>}</div>
 						<div class="flex items-baseline justify-between gap-4"><h3 class="display text-xl font-semibold uppercase">{product.name}</h3><span class="display text-2xl font-bold text-[#93470b]">{product.price}</span></div>
 						<p class="mt-2 text-base leading-7 text-[#544339]">{product.description}</p>
 					</article>)}
