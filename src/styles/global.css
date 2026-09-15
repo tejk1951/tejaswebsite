@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+@import 'tailwindcss';
+
+:root {
+	font-family: 'Manrope', sans-serif;
+	color: #1a1c1b;
+	background: #faf9f7;
+	font-synthesis: none;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	background: #faf9f7;
+}
+
+::selection {
+	background: #b25e24;
+	color: #fffbff;
+}
+
+.display {
+	font-family: 'Hanken Grotesk', sans-serif;
+}
+
+.caps {
+	font-family: 'Space Grotesk', sans-serif;
+	letter-spacing: 0.12em;
+}

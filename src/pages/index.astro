@@ -1,0 +1,87 @@
+---
+import '../styles/global.css';
+
+const products = [
+	{
+		name: 'Granura Classic',
+		price: '₹30',
+		description: 'Ragi juice sweetened with jaggery and mixed with chia seeds. A must-try drink for everyday health.',
+		image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuA_t3cqWY--Wk8bHFloY9Dd-oPe1UnV3Pdv45JXkIx8KEoeFvZRJvnd6qMrAxnTI0RqJ3vCsqT7aoj2j_UJ_YsUyk287wxSjAnhuHpJ2KPoyw9B2xbcIYQ-WiQ4XjzVcGoapq21qGZUg_CUk6i_Fq1x6M1npwM5ubpXy1-JgG9iniLi0Ea9c178ZDt7tOdALEQ1Z91IWeQ7A0RsijGDfsSk9DKBu8AakCdO8IaR0CMy_A7JQ6CvbhjpjfjKryBMeWqZMsU',
+	},
+	{
+		name: 'Granura Elix',
+		price: '₹30',
+		description: 'Sesame juice sweetened with jaggery and mixed with chia seeds. The best summer drink in the store.',
+		image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBd_WLdtM5M7jLz8SKfeGVBAT8oofmePVMv_Jfzhw16RWZL77VG5LD57lAeWXn6VK79wlANdnLwJdoJXq4pT2ADYqyUJ826siFFvrRkpQz4noJtkF51I90R-GI0exnqCtgFe1G9vYT2EZYj1kvEhrPxQr63YL6RRfCBSGhk4O05gE9QSIJwHl_hVkxSNhKfCDdNwcAAXm-Q1Yg2ejnPDheTGRKc4eSMJWPEOQyytQHNxDABZ8157DWmO_8GtYgXy8YfQDU',
+	},
+];
+
+const pillars = [
+	['Daily Fresh Production', 'DAILY MADE', 'Small-batch, hygienically prepared ragi and sesame drink crafted every day for peak taste and nutrition.'],
+	['3-Day Freshness Promise', 'ZERO PRESERVATIVES', 'A strict three-day window ensures you get clean, preservative-free bottles with authentic freshness.'],
+	['Hyperlocal Supply & Distribution', 'LOCAL ACCESS', 'Reliable daily availability for neighborhoods, gyms, and families with quick local delivery support.'],
+];
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="description" content="Freshly crafted ragi and sesame nutrition, delivered daily by Granura." />
+		<link rel="icon" href="/favicon.svg" />
+		<title>GRANURA | Freshly Crafted Nutrition</title>
+	</head>
+	<body>
+		<header class="fixed inset-x-0 top-0 z-50 border-b border-[#dac2b5]/30 bg-[#faf9f7]/85 backdrop-blur-xl">
+			<nav class="mx-auto flex max-w-[1280px] items-center justify-between px-5 py-4 md:px-16" aria-label="Main navigation">
+				<a href="#top" class="display text-2xl font-bold tracking-tight">GRANURA</a>
+				<div class="hidden items-center gap-8 md:flex">
+					<a class="caps text-xs font-semibold text-[#544339] transition hover:text-[#93470b]" href="#top">Home</a>
+					<a class="caps text-xs font-semibold text-[#544339] transition hover:text-[#93470b]" href="#about">About</a>
+					<a class="caps text-xs font-semibold text-[#544339] transition hover:text-[#93470b]" href="#collection">Store</a>
+					<a class="caps text-xs font-semibold text-[#544339] transition hover:text-[#93470b]" href="#services">Services</a>
+					<a class="caps text-xs font-semibold text-[#544339] transition hover:text-[#93470b]" href="#contact">Contact</a>
+				</div>
+				<a class="caps hidden bg-[#5f5e5c] px-6 py-3 text-xs font-semibold text-white transition hover:bg-[#1a1c1b] md:inline-flex" href="tel:+919108072519">+91 91080 72519</a>
+			</nav>
+		</header>
+
+		<main id="top" class="pt-24">
+			<section class="mx-auto grid max-w-[1280px] items-center gap-12 px-5 py-12 md:grid-cols-12 md:px-16 md:py-20">
+				<div class="md:col-span-5">
+					<p class="caps mb-5 text-xs font-semibold text-[#93470b]">Nourishment, made daily</p>
+					<h1 class="display max-w-xl text-5xl font-semibold leading-[1.05] tracking-tight md:text-7xl">Freshly crafted ragi & sesame nutrition.</h1>
+					<p class="mt-7 max-w-md text-lg leading-8 text-[#544339]">Clean, preservative-free goodness packed with calcium and plant protein for strong bones and steady energy.</p>
+					<a href="#collection" class="caps mt-9 inline-flex bg-[#5f5e5c] px-8 py-4 text-xs font-semibold text-white transition hover:bg-[#1a1c1b]">Explore the store <span class="ml-3">→</span></a>
+				</div>
+				<div class="relative md:col-span-7">
+					<img class="h-[520px] w-full rounded-2xl object-cover object-center md:h-[650px]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPujF1U_C4S3X0s9YJDmUXG2l0jHZkYYELnYtnRInO6VNn3xT66NHRLSH3vi8bjneGmZMssEmVCaa5Iej4y_dxHWpY51I3-RJhplCH13EWYScWBPUvn06Wm6o6CKjQrASfXGG2wNLRYMDKPjBuGGuicbxOKz5W8hjGCD2_FszsFvdrUczZ9ZKKUEJmQCXoAw_qiW3bFuHz4Fn4TcT8qMoOQGNbzcRTARKsoUSqco5vdUKVXEUEnu8zoLYQAtjTQpxvsBE" alt="Granura ragi blend bottles" />
+					<div class="absolute -bottom-5 -left-5 hidden bg-[#e8e2d9] p-5 md:block"><p class="caps text-xs font-semibold text-[#93470b]">Daily made</p><p class="display mt-1 text-xl">Always fresh.</p></div>
+				</div>
+			</section>
+
+			<section id="collection" class="mx-4 my-12 rounded-[2rem] bg-[#e8e2d9] px-5 py-20 md:mx-auto md:max-w-[1480px] md:px-16">
+				<div class="mx-auto mb-14 max-w-2xl text-center"><p class="caps mb-4 text-xs font-semibold text-[#93470b]">Main menu</p><h2 class="display text-4xl font-medium md:text-5xl">Juice in the store</h2></div>
+				<div class="mx-auto grid max-w-5xl gap-10 md:grid-cols-2">
+					{products.map((product) => <article class="group">
+						<div class="mb-6 aspect-[3/4] overflow-hidden rounded-xl bg-[#f4f3f1]"><img class="h-full w-full object-cover transition duration-700 group-hover:scale-105" src={product.image} alt={product.name} /></div>
+						<div class="flex items-baseline justify-between gap-4"><h3 class="display text-xl font-semibold uppercase">{product.name}</h3><span class="display text-2xl font-bold text-[#93470b]">{product.price}</span></div>
+						<p class="mt-2 text-base leading-7 text-[#544339]">{product.description}</p>
+					</article>)}
+				</div>
+			</section>
+
+			<section id="about" class="mx-auto grid max-w-[1280px] gap-16 px-5 py-24 md:grid-cols-2 md:px-16">
+				<div><p class="caps mb-4 text-xs font-semibold text-[#93470b]">About Granura</p><h2 class="display text-4xl font-medium md:text-5xl">Freshness you can trust.</h2><p class="mt-7 text-base leading-8 text-[#544339]">We bring traditional Indian nutrition to modern lifestyles with a freshly prepared ragi and sesame seed beverage. Made daily in a hygienic facility with no artificial preservatives, every bottle delivers natural calcium, plant protein, and essential nutrients.</p><blockquote class="mt-8 border-l-2 border-[#93470b] bg-[#f4f3f1] p-5 text-base italic leading-7">“Freshness you can trust: daily-made ragi + sesame fuel, delivered hyperlocal and always fresh.”</blockquote></div>
+				<div id="services"><p class="caps mb-2 text-xs font-semibold text-[#93470b]">Services</p><h3 class="display mb-5 text-3xl font-medium">Our pillars</h3><ul class="border-t border-[#dac2b5]">{pillars.map(([title, label, text]) => <li class="border-b border-[#dac2b5] py-6"><div class="flex flex-wrap justify-between gap-3"><strong>{title}</strong><span class="caps text-xs font-semibold text-[#93470b]">{label}</span></div><p class="mt-2 text-sm leading-6 text-[#544339]">{text}</p></li>)}</ul></div>
+			</section>
+
+			<section id="contact" class="mx-auto grid max-w-[1280px] gap-8 px-5 pb-24 md:grid-cols-2 md:px-16">
+				<img class="aspect-square w-full rounded-xl object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWb96PdxVeM5CLIVTK3-HX2dE3YRCVu265hGvHWWLcESvTzyDCN1UPBdqJ817ohzxZPY5m_2mGd2ZPZbBQTpi_TzPaRTqEFLqiSLmwsOVyvfOAbZW7p8lRAG2jWLQ9Rrj6dqUufORQ_ZclGqUzsrlZlUHN4FNBpjmNWDN4nDw2-VZvYzRRSKW_uQvq2WeYDDrWhnCjg-FhxKrnXkkq8m67-u1l0OslKhOdQNx1unWUX5qgNp6GtWYDGt5cChQlmDpNgEM" alt="Granura bottle in a bright creative workspace" />
+				<div class="rounded-xl bg-[#f4f3f1] p-8 md:p-12"><p class="caps mb-3 text-xs font-semibold text-[#93470b]">Get in touch</p><h2 class="display text-4xl font-medium">Contact us</h2><div class="mt-10 space-y-7 text-base leading-7"><div><p class="caps text-xs font-semibold text-[#544339]">Address</p><p>no.5, East Link Road A Street, Malleshwaram, Bengaluru, Karnataka, India</p></div><div><p class="caps text-xs font-semibold text-[#544339]">Phone</p><a class="font-semibold text-[#93470b]" href="tel:+919108072519">+91 91080 72519</a></div><div><p class="caps text-xs font-semibold text-[#544339]">Email</p><a class="font-semibold text-[#93470b]" href="mailto:tejaskumar373@gmail.com">tejaskumar373@gmail.com</a></div><div><p class="caps text-xs font-semibold text-[#544339]">Hours</p><p>Mon-Fri · 08:00-19:00</p></div></div></div>
+			</section>
+		</main>
+
+		<footer class="bg-[#e3e2e0] px-5 py-12 md:px-16"><div class="mx-auto flex max-w-[1280px] flex-col justify-between gap-8 md:flex-row md:items-center"><div><p class="display text-2xl font-bold">GRANURA</p><p class="mt-2 text-sm text-[#544339]">Copyright © 2026 Granura. All rights reserved.</p></div><div class="caps flex flex-wrap gap-6 text-xs font-semibold text-[#544339]"><a href="#top">Home</a><a href="#about">About</a><a href="#collection">Store</a><a href="#services">Services</a><a href="#contact">Contact</a></div></div></footer>
+	</body>
+</html>
