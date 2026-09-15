@@ -42,8 +42,12 @@ const pillars = [
 					<a class="caps text-xs font-semibold text-[#544339] transition hover:text-[#93470b]" href="#services">Services</a>
 					<a class="caps text-xs font-semibold text-[#544339] transition hover:text-[#93470b]" href="#contact">Contact</a>
 				</div>
-				<a class="caps hidden bg-[#5f5e5c] px-6 py-3 text-xs font-semibold text-white transition hover:bg-[#1a1c1b] md:inline-flex" href="tel:+919108072519">+91 91080 72519</a>
+				<div class="hidden items-center gap-4 md:flex"><a class="caps bg-[#5f5e5c] px-6 py-3 text-xs font-semibold text-white transition hover:bg-[#1a1c1b]" href="tel:+919108072519">+91 91080 72519</a></div>
+				<button id="menu-toggle" class="flex h-11 w-11 items-center justify-center border border-[#dac2b5] text-2xl text-[#1a1c1b] md:hidden" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open navigation menu"><span aria-hidden="true">☰</span></button>
 			</nav>
+			<div id="mobile-menu" class="hidden border-t border-[#dac2b5]/50 bg-[#faf9f7] px-5 py-5 md:hidden">
+				<div class="flex flex-col gap-5"><a class="caps text-xs font-semibold text-[#544339]" href="#top">Home</a><a class="caps text-xs font-semibold text-[#544339]" href="#about">About</a><a class="caps text-xs font-semibold text-[#544339]" href="#collection">Store</a><a class="caps text-xs font-semibold text-[#544339]" href="#services">Services</a><a class="caps text-xs font-semibold text-[#544339]" href="#contact">Contact</a><a class="caps inline-flex w-fit bg-[#5f5e5c] px-5 py-3 text-xs font-semibold text-white" href="tel:+919108072519">+91 91080 72519</a></div>
+			</div>
 		</header>
 
 		<main id="top" class="pt-24">
@@ -83,5 +87,19 @@ const pillars = [
 		</main>
 
 		<footer class="bg-[#e3e2e0] px-5 py-12 md:px-16"><div class="mx-auto flex max-w-[1280px] flex-col justify-between gap-8 md:flex-row md:items-center"><div><p class="display text-2xl font-bold">GRANURA</p><p class="mt-2 text-sm text-[#544339]">Copyright © 2026 Granura. All rights reserved.</p></div><div class="caps flex flex-wrap gap-6 text-xs font-semibold text-[#544339]"><a href="#top">Home</a><a href="#about">About</a><a href="#collection">Store</a><a href="#services">Services</a><a href="#contact">Contact</a></div></div></footer>
+		<script>
+			const menuToggle = document.querySelector('#menu-toggle');
+			const mobileMenu = document.querySelector('#mobile-menu');
+			menuToggle?.addEventListener('click', () => {
+				const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
+				menuToggle.setAttribute('aria-expanded', String(!isOpen));
+				menuToggle.setAttribute('aria-label', isOpen ? 'Open navigation menu' : 'Close navigation menu');
+				mobileMenu?.classList.toggle('hidden', isOpen);
+			});
+			mobileMenu?.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => {
+				menuToggle?.setAttribute('aria-expanded', 'false');
+				mobileMenu.classList.add('hidden');
+			}));
+		</script>
 	</body>
 </html>
